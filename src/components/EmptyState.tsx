@@ -1,8 +1,14 @@
+import { FaClipboardList, FaPlus, FaMinus } from "react-icons/fa";
+
 function EmptyState() {
-return (
-<p className="empty-state">
-No hay tareas todavía. Agrega una nueva tarea.
-</p>
-);
+    return (
+        <div className="empty-state">
+            <div className="empty-circle"><FaMinus /></div>
+            <h3>No tasks yet</h3>
+
+            <p>Add your first task using the form above.</p>
+        </div>
+    );
 }
+
 export default EmptyState;

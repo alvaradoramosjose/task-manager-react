@@ -1,33 +1,45 @@
 import { useState } from "react";
 
 type TaskInputProps = {
-    onAddTask: (text: string) => void;
+    onAddTask: (title: string) => void;
 };
 
 function TaskInput(props: TaskInputProps) {
-    const [text, setText] = useState("");
+    const [title, setText] = useState("");
 
     const handleSubmit = () => {
-        if (text.trim() === "") {
+        if (title.trim() === "") {
             return;
         }
 
-        props.onAddTask(text);
+        props.onAddTask(title);
         setText("");
     };
 
     return (
-        <div>
-            <input
-                type="text"
-                placeholder="Escribe una nueva tarea"
-                value={text}
-                onChange={(event) => setText(event.target.value)}
-            />
+        <div className="input-section">
+            <div className="task-input">
+                <input
+                    type="text"
+                    placeholder="Add a new task"
+                    value={title}
+                    onChange={(event) => setText(event.target.value)}
+                    onKeyDown={(event) => {
+                        if (event.key === "Enter") {
+                            handleSubmit();
+                        }
+                    }}
+                />
 
-            <button onClick={handleSubmit}>
-                Agregar
-            </button>
+                <button onClick={handleSubmit}>
+                    New Task
+                </button>
+            </div>
+
+            <div className="instructions">
+                <p>✔ Click the circle to complete a task.</p>
+                <p>✖ Click the red button to delete it.</p>
+            </div>
         </div>
     );
 }

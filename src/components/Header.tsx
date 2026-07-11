@@ -1,14 +1,9 @@
 function Header() {
     return (
-        <div class="bg-primary">
-            <div>
-                <div id="header-desc">
-                    <h2 class="fancy-font">Task Manager</h2>
-                    <div class="p-fancy-font">Mi primera aplicación con React.</div>
-                </div>
-            </div>
-        </div>
+        <header className="hero-header">
+            <h1>Task Manager</h1>
+            <p>My first app using React.</p>
+        </header>
     );
 }
-
 export default Header;
