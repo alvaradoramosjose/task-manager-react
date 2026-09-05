@@ -1,4 +1,4 @@
-# TASK MANAGER
+# TASK MANAGER REACT
  
 A fullstack task management application built with React (Vite) on the frontend and Express (TypeScript) on the backend.
 It supports full CRUD operations, user authentication, filtering, pagination, and is fully documented with Swagger and tested with Vitest and Jest.
