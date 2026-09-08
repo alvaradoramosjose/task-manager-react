@@ -11,6 +11,8 @@ export default function Register({ onRegisterSuccess, onSwitchToLogin }: Registe
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
     const [isError, setIsError] = useState(false);
+    
+    const fakeConst = "Get error";
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
