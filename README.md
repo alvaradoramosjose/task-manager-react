@@ -3,7 +3,7 @@
 A fullstack task management application built with React (Vite) on the frontend and Express (TypeScript) on the backend.
 It supports full CRUD operations, user authentication, filtering, pagination, and is fully documented with Swagger and tested with Vitest and Jest.
  
-<!-- BADGE_CI -->
+[![CI](https://github.com/alvaradoramosjose/task-manager-react/actions/workflows/ci.yml/badge.svg)](https://github.com/alvaradoramosjose/task-manager-react/actions/workflows/ci.yml)
  
 ## 🚀 Instalación local
  
