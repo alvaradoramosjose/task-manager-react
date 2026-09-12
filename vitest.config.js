@@ -15,5 +15,14 @@ export default defineConfig({
         statements: 60,
       },
     },
+    exclude: [
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/cypress/**',
+      '**/.{idea,git,cache,output,temp}/**',
+      '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build}.config.*',
+      '**/tests/example.spec.ts', // Exclude specific Playwright files
+      '**/*.spec.ts',              // Or exclude all *.spec.ts files if you reserve *.test.ts for Vitest
+    ],
   },
 })
