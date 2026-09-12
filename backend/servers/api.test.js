@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import request from 'supertest';
 import app from '../servers/app'; // Importas la instancia de Express
 
